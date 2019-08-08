@@ -6,6 +6,7 @@ export const THEME = {
 
 export const COMMAND = {
   DIGIT: 'DIGIT',
+  ZERO: 'ZERO',
   RESET: 'RESET',
   TOGGLE_SIGN: 'TOGGLE_SIGN',
   PERCENTAGE: 'PERCENTAGE',

@@ -44,7 +44,7 @@ const DATA = [
     { text: '+', theme: THEME.MAIN_OP, command: COMMAND.ADDITION },
   ],
   [
-    { text: '0', size: 2 },
+    { text: '0', command: COMMAND.ZERO, size: 2 },
     { text: ',', command: COMMAND.RATIONAL },
     { text: '=', theme: THEME.MAIN_OP, command: COMMAND.EQUAL },
   ]
@@ -100,9 +100,9 @@ export default class Calculator extends Component {
   render() {
     const {
       calc_store: {
-        calc_value,
-        temp_value,
-        info_message
+        input_string,
+        operation_string,
+        error_message
       }
     } = this.props;
     return (
@@ -111,11 +111,11 @@ export default class Calculator extends Component {
         <TextPanel
           fontSize={30}
           color='gray'
-          value={temp_value}
+          value={operation_string}
         />
         <TextPanel
-          value={info_message || calc_value || '0'}
-          fontSize={info_message ? 30 : 40}
+          value={error_message || input_string || '0'}
+          fontSize={error_message ? 20 : 40}
         />
         <ButtonContainer groupButtonCount={MAX_BUTTON_ROW}>
           {this.renderContainer}
