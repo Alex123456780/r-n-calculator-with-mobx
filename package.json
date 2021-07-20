@@ -10,7 +10,7 @@
     "mobx": "4.9.4",
     "mobx-react": "5.4.3",
     "react": "16.8.3",
-    "react-native": "0.59.10"
+    "react-native": "0.62.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
